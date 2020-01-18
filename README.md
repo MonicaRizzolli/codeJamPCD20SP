@@ -1,4 +1,4 @@
-# codeJamPCD20SP
+# Creative Code Jam PCD20SP
 Repositório da Creative Code Jam do PCD 20 SP
 
 **Participantes:**
