@@ -2,7 +2,7 @@ var express = require('express')
 var app = express()
 var server = app.listen(3000)
 
-var sketch = express.static('public/teste')
+var sketch = express.static('public/Teste')
 app.use('/', sketch)
 
 var lib = express.static('node_modules/socket.io-client/dist')
