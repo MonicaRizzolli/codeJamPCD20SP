@@ -9,7 +9,6 @@ function setup() {
   socket = io.connect('http://192.168.0.15:3000');
   socket.on('draw', peerDraw)
   
-  
   desenho = createGraphics(width, height)
 }
 

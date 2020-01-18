@@ -13,6 +13,6 @@ var io = socket(server)
 
 io.sockets.on('connection', user => {
 	user.on('draw', data =>{
-		user.broadcast.emit('draw', data)
+		user.broadcast.emit('create')
 	})
 })

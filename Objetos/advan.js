@@ -17,40 +17,43 @@ function draw() {
 }
 
 function mouseReleased(){
-  let obj = new Objeto(mouseX, mouseY);
+  let obj = new Advan(mouseX, mouseY);
   objetos.unshift(obj);
-  //fullscreen(true);
+  fullscreen(true);
 }
 
-export default class Objeto{
+class Advan{
   constructor(x,y){
-    this.tam = random(100,300); // tamanho do objeto
+    this.iniTamX = 4; // tamanho do objeto
+    this.iniTamY = 300; // tamanho do objeto
     this.pos = createVector(x,y); // define a posicao inicial do objetos
-    this.vel = createVector(random(-15,15),random(-15,15)); // define a velocidade do seu objeto
+    this.vel = createVector(0,0); // define a velocidade do seu objeto
     this.tempo = millis(); // pega o tempo que o objeto nasceu
     this.vida = 5000; // tempo de vida do seu objeto
+      this.inimY = mouseY;
   }
 
   update(){
     //COLOQUE AQUI O CODIGO DE COMPORTAMENTO DO OBEJTO
+    //Adicionei aceleração
+    this.acc = createVector(random(-0.5, 0.5),0);
+    this.vel.add(this.acc);
     this.pos.add(this.vel);
+      
+    //limitar velocidade
+    this.vel.limit(10);
   }
 
   desenha(){
     //COLOQUE AQUI O DESENHO DO SEU OBJETO
-    push()
-    translate(this.pos.x, this.pos.y)
-    noFill()
-    beginShape()
-    stroke(random(256),random(256),random(256))
-    strokeWeight(random(15))
-    vertex(0, 0)
-    vertex(random(-this.tam,this.tam), random(-this.tam,this.tam))
-    vertex(random(-this.tam,this.tam), random(-this.tam,this.tam))
-    vertex(random(-this.tam,this.tam), random(-this.tam,this.tam))
-    vertex(random(-this.tam,this.tam), random(-this.tam,this.tam))
-    endShape()
-    pop()
+    
+    noStroke();
+    for (var i = 0; i<30; i++){
+        fill(0,0,255);
+        this.tamY = sin((frameCount/24) + i*200) * this.inimY;
+        rect(this.pos.x + this.iniTamX * i, 0, this.iniTamX, this.tamY);
+        
+    }
   }
 
 }
