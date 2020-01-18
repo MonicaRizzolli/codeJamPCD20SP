@@ -1,6 +1,8 @@
 # Creative Code Jam PCD20SP
 Repositório da Creative Code Jam do PCD 20 SP
 
+![foto](https://raw.githubusercontent.com/MonicaRizzolli/codeJamPCD20SP/master/assets/codeJam1.JPG)
+
 **Participantes:**
 
 Jhonathan Angelo dos Santos
