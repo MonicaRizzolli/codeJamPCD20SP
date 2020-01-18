@@ -1,5 +1,5 @@
 {
-	"name": "NoiteDeProcessing",
+	"name": "PCD 2020",
 	"dependencies": {
 		"express": "^4.16.3",
 		"socket.io": "^2.0"
