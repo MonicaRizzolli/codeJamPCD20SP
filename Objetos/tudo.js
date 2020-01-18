@@ -19,7 +19,7 @@ function draw() {
 }
 
 function mouseReleased(){
-  // let obj = new Advan(mouseX, mouseY);
+  let obj = new Advan(mouseX, mouseY);
   objetos.unshift(obj);
   let obj1 = new Burnier(mouseX, mouseY);
   objetos.unshift(obj1);
