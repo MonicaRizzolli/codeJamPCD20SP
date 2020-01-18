@@ -33,10 +33,6 @@ function peerDraw(data){
   desenho.line( data.px, data.py, data.x, data.y )
 }
 
-function mousePressed() {
-  fullscreen(true);
-}
-
 function mouseDragged(){
   desenho.stroke( "#2AA8E5" )
   desenho.strokeWeight( sw )
