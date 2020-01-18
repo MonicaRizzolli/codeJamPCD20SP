@@ -44,8 +44,6 @@ class Fuser{
 
   desenha(){
     //COLOQUE AQUI O DESENHO DO SEU OBJETO
-    // for (let x = 0; x <= width; x = x + 30) {
-      // for (let y = 0; y <= height; y = y + 30) {
     const xAngle = map(mouseX, 0, width, -4 * PI, 4 * PI, true);
       const yAngle = map(mouseY, 0, height, -4 * PI, 4 * PI, true);
       // and also varies based on the particle's location
@@ -56,8 +54,6 @@ class Fuser{
       const myY = this.pos.y + 20 * sin(2 * PI * t + angle);
 
       ellipse(myX, myY, this.tam, this.tam); // draw particle
-    // }
-    // }
     t = t + 0.01; // update time
   }
 
