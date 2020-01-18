@@ -22,7 +22,7 @@ function mouseReleased(){
   //fullscreen(true);
 }
 
-class Objeto{
+export default class Objeto{
   constructor(x,y){
     this.tam = random(100,300); // tamanho do objeto
     this.pos = createVector(x,y); // define a posicao inicial do objetos
